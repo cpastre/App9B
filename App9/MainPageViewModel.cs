@@ -31,11 +31,15 @@ namespace App9
         public MainPageViewModel()
         {
             ClickCommand = new DelegateCommand(ClickAction);
+            Message = "Hello, World!";
+            Count = 0;
         }
 
         private void ClickAction()
         {
-            throw new NotImplementedException();
+            Random rnd = new Random();
+            Count += 100000 * rnd.Next() / int.MaxValue;
+            Message = "Hello, Windows IoT!\nCount = " + Count.ToString();
         }
     }
 }
