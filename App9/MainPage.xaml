@@ -12,12 +12,14 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="HelloMessage" HorizontalAlignment="Center" Text="{Binding Message}" TextWrapping="Wrap" Margin="10" 
                      VerticalAlignment="Center" FontSize="72" />
-            <Button x:Name="ClickMe" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Click Me!" 
-                    Command="{Binding ClickCommand}" Margin="10" FontSize="72" />
-            <Grid>
+            <Grid Width="350">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
