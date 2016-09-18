@@ -11,5 +11,15 @@
         <local:MainPageViewModel />
     </Page.DataContext>
 
-    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="HelloMessage" HorizontalAlignment="Center" Text="{Binding Message}" IsReadOnly="False" Margin="10" 
+                     VerticalAlignment="Center" Height="17" TextWrapping="Wrap" AcceptsReturn="True" />
+            <Button x:Name="ClickMe" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Click Me!" 
+                    Command="{Binding ClickCommand}" Margin="10" />
+            <TextBox x:Name="Counter" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                     Text="{Binding Count}" 
+                     FontSize="72" FontWeight="Bold" Margin="10" />
+        </StackPanel>
+    </Grid>
 </Page>

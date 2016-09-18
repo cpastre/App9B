@@ -31,14 +31,14 @@ namespace App9
         public MainPageViewModel()
         {
             ClickCommand = new DelegateCommand(ClickAction);
-            Message = "Hello, World!";
+            Message = "Hello, World!\nCount = " + Count.ToString();
             Count = 0;
         }
 
         private void ClickAction()
         {
             Random rnd = new Random();
-            Count += 100000 * rnd.Next() / int.MaxValue;
+            Count += (int)((double)100000 * rnd.Next() / int.MaxValue);
             Message = "Hello, Windows IoT!\nCount = " + Count.ToString();
         }
     }
