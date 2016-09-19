@@ -5,7 +5,7 @@
     xmlns:local="using:App9"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="800" Height="480">
+    mc:Ignorable="d" Width="800" Height="480" RequestedTheme="Dark">
 
     <Page.DataContext>
         <local:MainPageViewModel />
@@ -19,31 +19,7 @@
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="HelloMessage" HorizontalAlignment="Center" Text="{Binding Message}" TextWrapping="Wrap" Margin="10" 
                      VerticalAlignment="Center" FontSize="48" />
-            <Grid Width="350">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Content="7" Command="{Binding ClickCommand}" CommandParameter="7" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="0" Grid.Column="1" Content="8" Command="{Binding ClickCommand}" CommandParameter="8" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="0" Grid.Column="2" Content="9" Command="{Binding ClickCommand}" CommandParameter="9" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="1" Grid.Column="0" Content="4" Command="{Binding ClickCommand}" CommandParameter="4" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="1" Grid.Column="1" Content="5" Command="{Binding ClickCommand}" CommandParameter="5" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="1" Grid.Column="2" Content="6" Command="{Binding ClickCommand}" CommandParameter="6" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="2" Grid.Column="0" Content="1" Command="{Binding ClickCommand}" CommandParameter="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="2" Grid.Column="1" Content="2" Command="{Binding ClickCommand}" CommandParameter="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="2" Grid.Column="2" Content="3" Command="{Binding ClickCommand}" CommandParameter="3" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="3" Grid.Column="0" Content="&lt;" Command="{Binding ClickCommand}" CommandParameter="&lt;" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="3" Grid.Column="1" Content="0" Command="{Binding ClickCommand}" CommandParameter="0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-                <Button Grid.Row="3" Grid.Column="2" Content="." Command="{Binding ClickCommand}" CommandParameter="." HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" FontSize="48" Margin="2" />
-            </Grid>
+            <local:KeypadControl />
             <TextBox x:Name="Counter" HorizontalAlignment="Center" VerticalAlignment="Center" 
                      Text="{Binding Count}" 
                      FontSize="48" FontWeight="Bold" Margin="10" />
