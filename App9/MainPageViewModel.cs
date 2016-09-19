@@ -69,9 +69,12 @@ namespace App9
                 case "7":
                 case "8":
                 case "9":
-                    if (Message == "0" && entry != "0")
+                    if (Message == "0")
                     {
-                        Message = entry;
+                        if (entry != "0")
+                        {
+                            Message = entry;
+                        }
                     }
                     else
                     {
